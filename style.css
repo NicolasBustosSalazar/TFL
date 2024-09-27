@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.table-container {
+    margin-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px 12px;
+}
+
+#binaryValues {
+    font-size: 18px;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+}
+
+#binaryChart{
+    width: 50vw;
+}

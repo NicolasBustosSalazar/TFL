@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Representación Binaria y Modulación PSK</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Representación Binaria y Modulación PSK</h1>
+    <p>Ingresa una palabra para ver su representación binaria y su modulación PSK en el gráfico:</p>
+    <input type="text" id="wordInput" placeholder="Ingresa una palabra">
+    <button onclick="startVisualization()">Iniciar Visualización</button>
+
+    <div id="binaryValues"></div>
+
+    <!-- Primera gráfica: Representación Binaria -->
+    <div class="chart-container">
+        <div>
+            <canvas id="binaryChart"></canvas>
+            <!-- Tabla estática para PSK -->
+            <div class="table-container">
+                <h3>Modulación PSK</h3>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Segunda gráfica: Modulación PSK -->
+    <div class="chart-container">
+        <div class="chart-container">
+            <canvas id="pskChart"></canvas>
+            <div class="table-container">
+                <h3>Valores PSK</h3>
+                <table id="pskTable">
+                    <thead>
+                        <tr>
+                            <th>Índice</th>
+                            <th>Bit</th>
+                            <th>Fase (grados)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>180</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tercera gráfica: Modulación 4PSK -->
+    <div class="chart-container">
+        <div class="chart-container">
+            <canvas id="psk4Chart"></canvas>
+            <div class="table-container">
+                <h3>Valores 4PSK</h3>
+                <table id="psk4Table">
+                    <thead>
+                        <tr>
+                            <th>Índice</th>
+                            <th>Bits</th>
+                            <th>Fase (grados)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                            <td>0</td>
+                            <td>00</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>01</td>
+                            <td>90</td>
+                        </tr>
+                        <tr></tr>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>180</td>
+                        </tr>
+                        <tr></tr>
+                            <td>3</td>
+                            <td>11</td>
+                            <td>270</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cuarta gráfica: Modulación 8PSK -->
+    <div class="chart-container">
+        <div class="chart-container">
+            <canvas id="psk8Chart"></canvas>
+            <div class="table-container">
+                <h3>Valores 8PSK</h3>
+                <table id="psk8Table">
+                    <thead>
+                        <tr>
+                            <th>Índice</th>
+                            <th>Bits</th>
+                            <th>Fase (grados)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                            <td>0</td>
+                            <td>000</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>001</td>
+                            <td>45</td>
+                        </tr>
+                        <tr></tr>
+                            <td>2</td>
+                            <td>010</td>
+                            <td>90</td>
+                        </tr>
+                        <tr></tr>
+                            <td>3</td>
+                            <td>011</td>
+                            <td>135</td>
+                        </tr>
+                        <tr></tr>
+                            <td>4</td>
+                            <td>100</td>
+                            <td>180</td>
+                        </tr>
+                        <tr></tr>
+                            <td>5</td>
+                            <td>101</td>
+                            <td>225</td>
+                        </tr>
+                        <tr></tr>
+                            <td>6</td>
+                            <td>110</td>
+                            <td>270</td>
+                        </tr>
+                        <tr></tr>
+                            <td>7</td>
+                            <td>111</td>
+                            <td>315</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
