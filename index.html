@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Representación Binaria y Modulación PSK</h1>
+    <header><h1>Representación Binaria y Modulación PSK</h1></header>
+    
     <p>Ingresa una palabra para ver su representación binaria y su modulación PSK en el gráfico:</p>
     <input type="text" id="wordInput" placeholder="Ingresa una palabra">
     <button onclick="startVisualization()">Iniciar Visualización</button>
@@ -16,19 +17,22 @@
     <div id="binaryValues"></div>
 
     <!-- Primera gráfica: Representación Binaria -->
+     <h3>Señal de datos codificada</h3>
     <div class="chart-container">
         <div>
             <canvas id="binaryChart"></canvas>
             <!-- Tabla estática para PSK -->
             <div class="table-container">
-                <h3>Modulación PSK</h3>
+                
                 
             </div>
         </div>
     </div>
 
     <!-- Segunda gráfica: Modulación PSK -->
+     <h3>Modulación PSK</h3>
     <div class="chart-container">
+        
         <div class="chart-container">
             <canvas id="pskChart"></canvas>
             <div class="table-container">
@@ -59,6 +63,7 @@
     </div>
 
     <!-- Tercera gráfica: Modulación 4PSK -->
+    <h3>Modulación 4PSK</h3>
     <div class="chart-container">
         <div class="chart-container">
             <canvas id="psk4Chart"></canvas>
@@ -100,6 +105,7 @@
     </div>
 
     <!-- Cuarta gráfica: Modulación 8PSK -->
+     <h3>Modulación 8PSK</h3>
     <div class="chart-container">
         <div class="chart-container">
             <canvas id="psk8Chart"></canvas>

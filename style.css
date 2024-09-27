@@ -1,14 +1,33 @@
-body {
-    font-family: Arial, sans-serif;
+html,body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+header, header * {
+  margin: 0;
+  padding: 0;
 }
 
+header{
+    text-decoration: underline;
+    background-color: #fdfdfd;
+    /* border-radius: 10px; */
+    color: rgb(0, 0, 0);
+    /* height: ; */
+    padding: 50px;
+}
 .chart-container {
     display: flex;
     flex-direction: row;
-    
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    /* padding: 5px; */
+    background-color: #ffffff;
 }
 
 .table-container {
@@ -32,8 +51,41 @@ th, td {
     font-size: 18px;
     margin-bottom: 20px;
     white-space: pre-wrap;
+    
 }
 
-#binaryChart{
+#binaryChart {
+    width: 70vw;
+    height: 20vh;
+}
+
+#psk4Chart #psk8Chart{
     width: 50vw;
+}
+
+button{
+    background-color: darkturquoise;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.75);
+}
+
+button:hover{
+    border: inset 2px rgb(85, 47, 255);
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    /* border: solid 1px; */
+    border: none;
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.75);
+    color: black;
+
+}
+p{
+    padding: 10px;
+    text-align: left;
 }

@@ -81,6 +81,14 @@ const psk4Chart = new Chart(psk4Ctx, {
     labels: timeData,
     datasets: [
       {
+        label: "Onda Portadora (sin modulación)",
+        data: [],
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+        pointRadius: 0,
+        fill: false,
+      },
+      {
         label: "Onda Modulada (4PSK)",
         data: [],
         borderColor: "rgba(255, 205, 86, 1)",
@@ -109,6 +117,14 @@ const psk8Chart = new Chart(psk8Ctx, {
   data: {
     labels: timeData,
     datasets: [
+      {
+        label: "Onda Portadora (sin modulación)",
+        data: [],
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+        pointRadius: 0,
+        fill: false,
+      },
       {
         label: "Onda Modulada (8PSK)",
         data: [],
@@ -219,12 +235,14 @@ function startVisualization() {
 
     // Agregar los datos de la modulación 4PSK
     psk4Chart.data.labels = pskChart.data.labels; // Usar las mismas etiquetas de tiempo
-    psk4Chart.data.datasets[0].data = psk4Wave;
+    psk4Chart.data.datasets[0].data = carrierWave;
+    psk4Chart.data.datasets[1].data = psk4Wave;
     psk4Chart.update();
 
     // Agregar los datos de la modulación 8PSK
     psk8Chart.data.labels = pskChart.data.labels; // Usar las mismas etiquetas de tiempo
-    psk8Chart.data.datasets[0].data = psk8Wave;
+    psk8Chart.data.datasets[0].data = carrierWave;
+    psk8Chart.data.datasets[1].data = psk8Wave;
     psk8Chart.update();
 
     // Configura el intervalo para mostrar cada bit cada 0.25s en la gráfica binaria
